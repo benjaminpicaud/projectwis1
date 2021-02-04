@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détail produit{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h1>Produit {{ product.name }}! ✅</h1>
+
+    <p>{{ product.description | raw }}</p>
+    <p>{{ product.prixindicatif }}</p> 
+
+    {% if(product.disponibilite) %}
+        <p>Ce produit est disponnible</p>
+        {% else %}
+        <p>Ce produit n'est pas disponnible actuellement</p>
+    {% endif %} 
+</div>
+{% endblock %}
